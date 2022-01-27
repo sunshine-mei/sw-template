@@ -1,0 +1,32 @@
+/*
+  样式规范表
+*/
+
+// 常规字体大小设置
+$font-size-sm:22rpx;
+$font-size-base:26rpx;
+$font-size-lg:32rpx;
+
+// 常规配色设置
+$color-primary: #1574DF !default; //用于需要突出和强调的文字、按钮和icon
+
+// 字体配色
+$text-color: #1F2021;
+$text-grey-color: #6F737A;
+
+// 背景色
+$bg-color:#ffffff;
+$bg-color-grey:#F1F3F6; // 暗色背景色
+
+// 边框颜色
+$border-color: #D9DCE0;
+
+/* 水平间距 */
+$row-sm: 10px;
+$row-base: 20rpx;
+$row-lg: 30rpx;
+
+/* 垂直间距 */
+$col-sm: 10rpx;
+$col-base: 20rpx;
+$col-lg: 30rpx;

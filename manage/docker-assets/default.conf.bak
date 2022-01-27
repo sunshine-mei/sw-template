@@ -1,0 +1,35 @@
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name  localhost;
+
+    add_header Access-Control-Allow-Origin *;
+
+    #charset koi8-r;
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location /study-center-management {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+        try_files $uri $uri/ @router;
+    }
+
+    location @router {
+        rewrite ^.*$ /study-center-management/index.html last;
+    }
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+    set $backendBaseUrl ${BACKEND_BASE_URL};
+    set $casServer ${AUTH_CAS};
+    location /study-center-management/assets/config.js {
+        default_type application/javascript;
+        return 200 'window.serverConfig = { BACKEND_BASE_URL: "$backendBaseUrl", AUTH_CAS: "$casServer"};';
+    }
+
+}

@@ -1,0 +1,58 @@
+/*
+  样式规范表
+*/
+
+/**
+ * Define Font color
+ */
+$primary-color: #3394E1;
+$blue-color: #2A6BB3;
+$blue-light-color: #2367B1;
+$blue-bright-color: #0E6CCB;
+$title-color: #333333;
+$text-color: #666666;
+$secondary-color: #999999;
+$disabled-color: #dddddd;
+$divider-color: #eeeeee;
+$bg-color: #F5F7F9;
+$white-color: #ffffff;
+
+/**
+ * Define Font Size
+ */
+$font-size-sm: 12px;
+$font-size-base: 14px;
+$font-size-middle: 16px;
+$font-size-lg: 18px;
+$font-size-tl: 20px;
+$font-size-jb: 24px;
+
+/**
+ * Define Font Weight
+ */
+$font-light: 200;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 600;
+
+/**
+ * Define Border Color
+ **/
+$border-color: #E6ECF2;
+$border-input-color: #D6DCE3;
+
+/**
+ * Define Border Radius
+ **/
+$border-radius-sm: 1rpx;
+$border-radius-base: 4rpx;
+$border-radius-lg: 12rpx;
+$border-radius-circle: 50%;
+
+/**
+ * Define Other
+ */
+$mask-color: rgba(0, 0, 0, .5);
+$success-color: #45B97B;
+$warning-color: #F59123;
+$error-color: #E64D55;

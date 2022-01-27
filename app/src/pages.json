@@ -1,0 +1,22 @@
+{
+	"easycom": {
+		"^u-(.*)": "~/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "校内班车查询"
+      }
+    }
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "校内班车查询",
+		"app-plus": {
+			"titleNView": false
+		},
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

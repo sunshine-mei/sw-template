@@ -1,0 +1,90 @@
+@mixin center-container {
+  width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex-row($center: 0) {
+  display: flex;
+  flex-direction: row;
+  @include flex-center($center)
+}
+
+@mixin flex-column($center: 0) {
+  display: flex;
+  flex-direction: column;
+  @include flex-center($center)
+}
+
+@mixin flex-center($center: 0) {
+  @if ($center == 1) {
+    align-items: center;
+  } @else if ($center == 2) {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@mixin text-ellipsis($center: 0) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include text-lines($center)
+}
+
+@mixin text-lines($center: 0) {
+  @if ($center > 1) {
+    display: -webkit-box;
+    -webkit-line-clamp: $center;
+    -webkit-box-orient: vertical;
+  } @else {
+    white-space: nowrap;
+  }
+}
+
+@mixin icon-sizes($size: 14) {
+  width: $size+px;
+  line-height: $size+px;
+  font-size: $size+px;
+}
+
+@mixin btn-hover($bgColor: null) {
+  &:active {
+    opacity: 0.6;
+    @if ($bgColor) {
+      background-color: $bgColor;
+    }
+  }
+}
+
+@mixin scroll-bar($size: 6) {
+  $--scrollbar-thumb-background: #b4bccc;
+  $--scrollbar-track-background: #fff;
+
+  &::-webkit-scrollbar {
+    z-index: 11;
+    width: $size+px;
+
+    &:horizontal {
+      height: $size+px;
+    }
+
+    &-thumb {
+      border-radius: 5px;
+      width: $size+px;
+      background: $--scrollbar-thumb-background;
+    }
+
+    &-corner {
+      background: $--scrollbar-track-background;
+    }
+
+    &-track {
+      background: $--scrollbar-track-background;
+
+      &-piece {
+        background: $--scrollbar-track-background;
+        width: $size+px;
+      }
+    }
+  }
+}

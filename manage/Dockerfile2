@@ -1,0 +1,10 @@
+FROM nginx:stable-alpine
+
+COPY dist/study-center-management /usr/share/nginx/html/study-center-management
+COPY docker-assets/docker-entrypoint.sh /
+COPY docker-assets/default.conf.bak /etc/nginx/conf.d/
+
+RUN chmod +x /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["app"]
