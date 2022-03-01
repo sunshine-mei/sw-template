@@ -27,6 +27,9 @@ Vue.prototype.$store = store
 // 引入 uView 组件
 Vue.use(uView)
 
+//uView2.x单位默认为px
+uni.$u.config.unit = 'rpx'
+
 App.mpType = 'app'
 
 const app = new Vue({
