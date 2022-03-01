@@ -1,5 +1,5 @@
 # uniapp-demo2
-# uView1.x
+# uView2.x
 
 ## Project setup
 ```

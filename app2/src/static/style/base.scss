@@ -1,0 +1,35 @@
+@import "reset.scss";
+@import "mixin.scss";
+@import "config.scss";
+
+// 公共机制的样式，在项目中可以通用
+
+a{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+input{
+  outline: none;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.fl{
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+.clearfix{
+  &:before,&:after{
+    content: ' ';
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+}
