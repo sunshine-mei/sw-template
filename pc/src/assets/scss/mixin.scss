@@ -1,3 +1,9 @@
+@mixin center-container {
+  width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @mixin flex-row($center: 0) {
   display: flex;
   flex-direction: row;
