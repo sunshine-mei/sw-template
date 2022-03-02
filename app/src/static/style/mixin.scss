@@ -56,6 +56,20 @@
   }
 }
 
+/**箭头展开动画**/
+@mixin arrow-transform {
+  transition: 0.3s ease;
+  transform-origin: center;
+  transform: rotateZ(180deg);
+}
+
+/**箭头收起动画**/
+@mixin arrow-transform-return {
+  transition: 0.3s ease;
+  transform-origin: center;
+  transform: rotateZ(0deg);
+}
+
 @mixin scroll-bar($size: 6) {
   $--scrollbar-thumb-background: #b4bccc;
   $--scrollbar-track-background: #fff;
