@@ -70,7 +70,7 @@ const app = new Vue({
   require('@/api/request.js')(app)
 
   /*处理token信息*/
-  const token = app.$store.state.token || await Token(BACKEND_BASE_URL)
+  const token = await Token(BACKEND_BASE_URL) || app.$store.state.token
   if (token) {
     app.$store.commit('setToken', token)
     // app.$store.dispatch('setUser')
