@@ -44,6 +44,7 @@
     "@dcloudio/uni-h5": "^2.0.0-28620200814003",
     "@dcloudio/uni-helper-json": "*",
     "@dcloudio/uni-i18n": "^2.0.0-28620200814003",
+    "@dcloudio/uni-cli-i18n": "^2.0.1-33920220208001",
     "@dcloudio/uni-mp-360": "^2.0.0-28620200814003",
     "@dcloudio/uni-mp-alipay": "^2.0.0-28620200814003",
     "@dcloudio/uni-mp-baidu": "^2.0.0-28620200814003",
