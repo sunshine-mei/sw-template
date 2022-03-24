@@ -5,14 +5,14 @@ server {
     #charset koi8-r;
     #access_log  /var/log/nginx/host.access.log  main;
 
-    location / {
+    location /h5 {
         root   /usr/share/nginx/html;
         index  index.html index.htm;
         try_files $uri $uri/ @router;
     }
 
     location @router {
-        rewrite ^.*$ /index.html last;
+        rewrite ^.*$ /h5/index.html last;
     }
 
     set $backendBaseUrl ${BACKEND_BASE_URL};
