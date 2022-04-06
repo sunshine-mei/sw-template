@@ -11,9 +11,15 @@ yarn install
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 修改项目名称路径
 ```
-yarn build
+/app2/src/pages.json
+/app2/src/manifest.json
+```
+
+### 修改环境变量路径
+```
+/app2/src/static/serverConfig.json
 ```
 
 ### Customize configuration

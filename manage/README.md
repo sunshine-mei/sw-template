@@ -20,5 +20,16 @@ npm run build
 npm run lint
 ```
 
+### 修改网站标题路径
+```
+/manage/public/index.html
+```
+
+### 修改环境变量路径
+```
+/manage/public/assets/config.json
+```
+
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
