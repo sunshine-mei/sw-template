@@ -6,10 +6,6 @@
                           v-for="(item, index) in list">{{ item.name }}
       </el-breadcrumb-item>
     </el-breadcrumb>
-    <div v-if="$store.state.userAuth" @click.stop="toManage" class="breadcrumb-bar-component-navBtn">
-      <img src="@/assets/img/icon/manage.png" alt="">
-      校内班车管理
-    </div>
   </div>
 </template>
 
@@ -26,9 +22,7 @@ export default {
     return {}
   },
   methods: {
-    toManage() {
-      window.open(`${serverConfig.BACKEND_BASE_URL}/school-bus-manage/`, "_blank");
-    }
+
   }
 }
 </script>

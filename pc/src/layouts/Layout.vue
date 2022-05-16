@@ -30,7 +30,6 @@ export default {
   },
   created(){
     // this.getUserInfo()
-    this.getUserAuth()
   },
   computed: {
 
@@ -38,16 +37,10 @@ export default {
   methods: {
     ...mapMutations({
       setUserInfo: 'setUserInfo',
-      setUserAuth: 'setUserAuth',
     }),
     getUserInfo(){
       this.$api.getUserInfo().then(res => {
         this.setUserInfo(res.data)
-      })
-    },
-    getUserAuth(){
-      this.$api.getUserAuth().then(res => {
-        this.setUserAuth(res.data)
       })
     },
     routerHandle(item){

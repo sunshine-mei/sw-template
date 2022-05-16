@@ -33,7 +33,7 @@ export default {
     }),
     getUserInfo(){
       this.loading = true
-      return this.$api.user.getUserInfo().then(res => {
+      return this.$api.getUserInfo().then(res => {
         if (res.code === 200 && res.data) {
           this.setUserInfo(res.data)
         }

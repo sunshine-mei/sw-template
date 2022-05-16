@@ -7,7 +7,6 @@ export default new Vuex.Store({
   state: {
     token: '',
     userInfo: {},
-    userAuth: null
   },
   mutations: {
     setToken(state, token) {
@@ -21,15 +20,11 @@ export default new Vuex.Store({
     setUserInfo(state, data) {
       state.userInfo = data
     },
-    setUserAuth(state, data){
-      state.userAuth = data
-    }
   },
   actions: {
   },
   getters: {
     token: state => state.token,
     userInfo: state => state.userInfo,
-    userAuth: state => state.userAuth,
   }
 })
