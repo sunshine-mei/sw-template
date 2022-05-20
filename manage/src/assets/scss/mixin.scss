@@ -64,9 +64,9 @@
   }
 }
 
-@mixin scroll-bar($size: 6) {
-  $--scrollbar-thumb-background: #b4bccc;
-  $--scrollbar-track-background: #fff;
+@mixin scroll-bar($size: 6, $thumbBg: #b4bccc, $trackBg: #fff) {
+  $--scrollbar-thumb-background: $thumbBg;
+  $--scrollbar-track-background: $trackBg;
 
   &::-webkit-scrollbar {
     z-index: 11;
