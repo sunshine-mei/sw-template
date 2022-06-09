@@ -40,15 +40,17 @@ router.beforeEach((to, from, next) => {
   if (window.location.href.indexOf("token") > -1) {
     let obj = qs.parse(window.location.href.split('?')[1]);
     localStorage.setItem("token", obj.token.split('#')[0]);
+    sessionStorage.setItem("token", obj.token.split('#')[0]);
     store.commit('setToken',obj.token.split('#')[0])
     //localStorage.setItem("ticket", obj.ticket.split('#')[0]);
     window.location.href = window.location.href.split('?')[0]
   }
-  if (localStorage.getItem("Admin-Token")) {
-    localStorage.setItem("token", localStorage.getItem("Admin-Token"));
+  if (sessionStorage.getItem("Admin-Token")) {
+    localStorage.setItem("token", sessionStorage.getItem("Admin-Token"));
+    sessionStorage.setItem("token", sessionStorage.getItem("Admin-Token"));
   }
   // 优先取云平台的token，取不到再取我们自己的
-  if (!localStorage.getItem("Admin-Token") && !localStorage.getItem("token")) {
+  if (!sessionStorage.getItem("Admin-Token") && !sessionStorage.getItem("token")) {
     if (`${serverConfig.BACKEND_BASE_URL}`.endsWith("/")) {
       window.location.href = `${serverConfig.BACKEND_BASE_URL}cas/login?redirect_uri=${location.href}`;
     } else {
